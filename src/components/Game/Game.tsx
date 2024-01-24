@@ -34,7 +34,7 @@ function Game() {
       swal({
         icon: "success",
         title: "Winner!",
-        text: "Click 'New Game' to play again",
+        text: "Click 'New Game' to clear the scores and play again",
       }).then(function () {
         resetBoard();
       });
