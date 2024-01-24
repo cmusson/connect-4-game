@@ -1,10 +1,18 @@
-import React from "react";
 import styles from "./GameColumn.module.css";
 
-function GameColumn({ col, onClick }) {
+type Column = string[] | null[];
+type GameColumn = { [key: number]: Column };
+
+interface IGameColumnProps {
+  col: Column;
+  onClick: () => void;
+}
+
+function GameColumn({ col, onClick }: IGameColumnProps) {
   return (
     <div className={styles.column} onClick={onClick}>
       {col.map((cell, index) => {
+        console.log();
         if (cell === "a") {
           return (
             <img

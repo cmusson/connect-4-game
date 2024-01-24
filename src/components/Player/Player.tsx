@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import styles from "./Player.module.css";
 import { GameContext } from "../../context/GameContext";
 

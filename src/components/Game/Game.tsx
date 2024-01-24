@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import styles from "./Game.module.css";
 import GameColumn from "../GameColumn";
 import { GameContext } from "../../context/GameContext";
@@ -10,7 +11,7 @@ function Game() {
     currentPlayer,
     setCurrentPlayer,
     gameColumns,
-    setGameColums,
+    setGameColumns,
     score,
     setScore,
     resetBoard,
@@ -20,11 +21,11 @@ function Game() {
     checkGameOver();
   }, [gameColumns]);
 
-  const addToken = (columnIndex) => {
+  const addToken = (columnIndex: number) => {
     const column = gameColumns[columnIndex];
-    const tokenPosition = column.indexOf(null);
+    const tokenPosition = column.indexOf(null!);
     column[tokenPosition] = currentPlayer;
-    setGameColums({ ...gameColumns, [columnIndex]: column });
+    setGameColumns({ ...gameColumns, [columnIndex]: column });
     if (currentPlayer === "a") setCurrentPlayer("b");
     if (currentPlayer === "b") setCurrentPlayer("a");
   };
