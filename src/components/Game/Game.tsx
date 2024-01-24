@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from "react";
 import styles from "./Game.module.css";
@@ -112,7 +111,11 @@ function Game() {
     <div className={styles.grid}>
       {Object.entries(gameColumns).map(([key, col], index) => {
         return (
-          <GameColumn col={col} key={index} onClick={() => addToken(index)} />
+          <GameColumn
+            col={col}
+            key={`${index} ${key}`}
+            onClick={() => addToken(index)}
+          />
         );
       })}
     </div>
