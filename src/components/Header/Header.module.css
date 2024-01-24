@@ -1,0 +1,10 @@
+.title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.titleImg {
+  height: 50px;
+  border-radius: 50%;
+}
