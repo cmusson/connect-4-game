@@ -11,8 +11,10 @@ A React.js web app connect 4 game:
 
 To run this app:
 
-- 'npm install' in main folder
-- 'npm start' to run the app
+- Ensure node and bun are installed on your local environment
+
+- 'bun install' in main folder
+- 'bun dev' to run the app
 
 Hope you like my app, let me know any feedback you may have :)
 
