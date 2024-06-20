@@ -46,6 +46,7 @@ const initialGameState: GameState = {
 const GameContext = createContext(initialGameState);
 
 const GameProvider = ({ children }: { children: React.ReactNode }) => {
+  // create a function to stop the game if there is no possible winner (draw)
   const [starter, setStarter] = useState(true);
   const [currentPlayer, setCurrentPlayer] = useState("a");
   const [score, setScore] = useState({ a: 0, b: 0 });
